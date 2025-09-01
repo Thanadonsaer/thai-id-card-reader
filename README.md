@@ -4,7 +4,35 @@
 
 ## คุณสมบัติ
 
-- เชื่อมต่อกับอุปกรณ์อ่านบัตร ZW-12027-1 ผ่าน WebUSB API
+- เชื่อมต่อกับอุปกรณ์อ่านบัตร ZW-12027-1 ## ⚠️ ข้อจำกัดของ GitHub Pages
+
+- **HTTPS Required:** WebUSB API ต้องใช้ HTTPS เท่านั้น
+- **User Interaction:** ผู้ใช้ต้อง interact กับหน้าเว็บก่อนถึงจะใช้ WebUSB ได้
+- **Browser Support:** ต้องใช้ Chrome/Edge ที่รองรับ WebUSB
+
+## 🔧 การแก้ไขปัญหา Permission
+
+หากเจอ error "Permission denied":
+
+1. **ตรวจสอบ Repository Settings:**
+   - ไปที่ Repository Settings > Actions > General
+   - เลือก "Read and write permissions" สำหรับ GITHUB_TOKEN
+
+2. **หรือใช้ Personal Access Token:**
+   - สร้าง Personal Access Token ใน GitHub Settings > Developer settings
+   - เพิ่มเป็น secret ใน Repository Settings > Secrets and variables > Actions
+   - ชื่อ secret: `ACCESS_TOKEN`
+   - อัปเดต workflow ให้ใช้ `secrets.ACCESS_TOKEN` แทน `secrets.GITHUB_TOKEN`
+
+3. **ตรวจสอบ Branch Protection:**
+   - หากมี branch protection rules ให้ตรวจสอบว่า GitHub Actions สามารถ push ได้
+
+## 📊 สถานะ Deployment
+
+หลังจาก push โค้ดแล้ว:
+- ไปที่ Repository > Actions เพื่อดูสถานะ build
+- ไปที่ Repository > Settings > Pages เพื่อดูสถานะ deployment
+- URL ของแอป: `https://Thanadonsaer.github.io/thai-id-card-reader/`SB API
 - อ่านข้อมูลบัตรประชาชนไทยแบบ real-time
 - แสดงข้อมูลส่วนตัว ชื่อ ที่อยู่ วันเกิด และข้อมูลอื่นๆ
 - UI ที่ใช้งานง่ายและ responsive
@@ -95,7 +123,7 @@ npm run build
 
 ## การ Deploy บน GitHub Pages
 
-### วิธีที่ 1: ใช้ GitHub Actions (แนะนำ)
+### วิธีที่ 1: ใช้ GitHub Actions (แนะนำ - อัตโนมัติ)
 
 1. **สร้าง Repository บน GitHub:**
    - ไปที่ https://github.com/new
@@ -106,7 +134,7 @@ npm run build
    ```bash
    git init
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Initial commit - Thai ID Card Reader"
    git branch -M main
    git remote add origin https://github.com/Thanadonsaer/thai-id-card-reader.git
    git push -u origin main
@@ -115,7 +143,36 @@ npm run build
 3. **เปิดใช้งาน GitHub Pages:**
    - ไปที่ Repository Settings > Pages
    - เลือก Source: "GitHub Actions"
-   - รอให้ GitHub Actions build และ deploy เสร็จ (ใช้ Node.js 20)
+   - รอให้ระบบ build และ deploy เสร็จโดยอัตโนมัติ
+
+### วิธีที่ 2: ใช้ npm deploy (แบบ manual)
+
+หากต้องการ deploy ด้วยตนเอง:
+
+```bash
+# Build โปรเจกต์
+npm run build
+
+# Deploy ขึ้น GitHub Pages
+npm run deploy
+```
+
+หลังจากนั้นไปเปิดใช้งาน GitHub Pages ใน Settings > Pages โดยเลือก:
+- Source: "Deploy from a branch"
+- Branch: `gh-pages`
+- Folder: `/ (root)`
+
+### วิธีที่ 3: Deploy แบบดั้งเดิม
+
+หากมีปัญหากับวิธีอื่น:
+
+```bash
+# Build โปรเจกต์
+npm run build
+
+# Copy ไฟล์ในโฟลเดอร์ dist ไปยัง branch gh-pages
+# หรือ upload ไฟล์ใน dist ขึ้น GitHub Pages ด้วยตนเอง
+```
 
 ### วิธีที่ 2: ใช้ npm deploy
 
