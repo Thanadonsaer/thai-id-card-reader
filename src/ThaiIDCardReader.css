@@ -1,0 +1,266 @@
+.thai-id-reader {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.thai-id-reader h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.thai-id-reader h2 {
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+}
+
+.connection-status {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.connection-status p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #495057;
+}
+
+.connect-btn, .disconnect-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.connect-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.connect-btn:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.connection-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.service-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #6f42c1;
+  color: white;
+}
+
+.service-btn:hover:not(:disabled) {
+  background-color: #5a32a3;
+}
+
+.service-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.disconnect-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.connected-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.reset-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.reset-btn:hover:not(:disabled) {
+  background-color: #e0a800;
+}
+
+.reset-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.device-info {
+  background: #e8f4fd;
+  border: 1px solid #b3d9ff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.device-info h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.device-note {
+  margin-top: 15px;
+  padding: 10px;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  color: #856404;
+  font-size: 0.9em;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+  white-space: pre-line;
+  line-height: 1.5;
+}
+
+.error-message h4 {
+  margin: 0 0 10px 0;
+  color: #721c24;
+}
+
+.card-data {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-header h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.save-btn {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.data-item label {
+  font-weight: bold;
+  color: #495057;
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+.data-item span {
+  color: #212529;
+  word-break: break-word;
+}
+
+.instructions {
+  background: #e9ecef;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.instructions h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.instructions ol {
+  padding-left: 20px;
+}
+
+.instructions li {
+  margin-bottom: 8px;
+  color: #495057;
+}
+
+.troubleshooting-commands {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #ffc107;
+}
+
+.troubleshooting-commands h5 {
+  margin: 0 0 10px 0;
+  color: #856404;
+}
+
+.command-list {
+  background: #2d3748;
+  color: #e2e8f0;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.command-list code {
+  background: none;
+  color: #68d391;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .data-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
