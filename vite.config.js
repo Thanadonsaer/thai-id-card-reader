@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/thanadonsaer/thai-id-card-reader/',
+  base: '/thai-id-card-reader/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
