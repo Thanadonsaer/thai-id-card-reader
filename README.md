@@ -102,24 +102,32 @@ npm run build
    - ตั้งชื่อ repository: `thai-id-card-reader`
    - เลือก Public repository
 
-2. **อัปเดตชื่อ Repository ในโค้ด:**
-   - แก้ไข `vite.config.js` ให้ `base: '/your-username/thai-id-card-reader/'`
-   - แก้ไข `package.json` ให้ `homepage: "https://your-username.github.io/thai-id-card-reader"`
-
-3. **Push โค้ดขึ้น GitHub:**
+2. **Push โค้ดขึ้น GitHub:**
    ```bash
    git init
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/your-username/thai-id-card-reader.git
+   git remote add origin https://github.com/Thanadonsaer/thai-id-card-reader.git
    git push -u origin main
    ```
 
-4. **เปิดใช้งาน GitHub Pages:**
+3. **เปิดใช้งาน GitHub Pages:**
    - ไปที่ Repository Settings > Pages
    - เลือก Source: "GitHub Actions"
-   - รอให้ GitHub Actions build และ deploy เสร็จ
+   - รอให้ GitHub Actions build และ deploy เสร็จ (ใช้ Node.js 20)
+
+### วิธีที่ 2: ใช้ npm deploy
+
+1. **Build และ Deploy:**
+   ```bash
+   npm run deploy
+   ```
+
+2. **เปิดใช้งาน GitHub Pages:**
+   - ไปที่ Repository Settings > Pages
+   - เลือก Source: "Deploy from a branch"
+   - เลือก Branch: `gh-pages` และ Folder: `/ (root)`
 
 ### วิธีที่ 2: ใช้ npm deploy
 
