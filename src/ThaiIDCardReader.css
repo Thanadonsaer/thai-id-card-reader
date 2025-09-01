@@ -148,6 +148,40 @@
   color: #721c24;
 }
 
+.error-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.refresh-btn, .localhost-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refresh-btn {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.refresh-btn:hover {
+  background-color: #e0a800;
+}
+
+.localhost-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.localhost-btn:hover {
+  background-color: #138496;
+}
+
 .card-data {
   background: white;
   border: 1px solid #dee2e6;
